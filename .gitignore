@@ -1,0 +1,62 @@
+# Plugins
+plugins/dynmap/web/**/*
+plugins/Essentials/userdata/**/*
+plugins/GroupManager/backup/**/*
+plugins/GroupManager/worlds/**/*
+# Home stuff
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.gitconfig
+.htoprc
+.nano_history
+.oh-my-zsh/
+.profile
+.ssh/
+.vim/
+.viminfo
+.zcompdump
+.zsh-update
+.zsh_history
+.zshrc
+.zshrc.pre-oh-my-zsh
+.mysql_history
+
+## Logs
+*.log*
+*.lck
+*.1
+.server.log.swp
+
+## maps
+maps/*
+*/level.*
+*/players/*.dat
+*/region/*.mcr
+*/region/*.mca
+*/session.lock
+*/uid.dat
+*/data/*.dat
+
+## Nether and The End
+*/DIM*/level.*
+*/DIM*/region/*.mcr
+*/DIM*/region/*.mca
+*/DIM*/session.lock
+*/DIM*/uid.dat
+
+# Server
+server.properties
+
+## Databases
+*.db
+
+## Backups
+backups/*
+
+# Vanilla
+vanilla/*
+
+## Garbage
+.DS_Store
