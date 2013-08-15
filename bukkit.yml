@@ -13,7 +13,7 @@ settings:
   connection-throttle: 4000
   query-plugins: true
   deprecated-verbose: default
-  shutdown-message: Server closed
+  shutdown-message: Nirrius Minecraft Server shutting down...
 spawn-limits:
   monsters: 70
   animals: 15
@@ -34,7 +34,7 @@ auto-updater:
   on-update:
   - warn-console
   - warn-ops
-  preferred-channel: rb
+  preferred-channel: beta
   host: dl.bukkit.org
   suggest-channels: true
 database:
