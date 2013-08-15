@@ -1,0 +1,24 @@
+cfg-version: 7
+message: You have reached the edge of this world.
+round-border: false
+debug-mode: false
+whoosh-effect: true
+knock-back-dist: 3.0
+timer-delay-ticks: 5
+dynmap-border-enabled: true
+dynmap-border-message: The Earth ends here.
+portal-redirection: true
+remount-delay-ticks: 0
+worlds:
+  centralius:
+    x: -261.90625
+    z: 969.8125
+    radiusX: 400
+    radiusZ: 400
+    wrapping: false
+  centralius_the_end:
+    x: 0.0
+    z: 0.0
+    radiusX: 500
+    radiusZ: 500
+    wrapping: false
