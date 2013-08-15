@@ -20,10 +20,10 @@
 ############################################################
 
 # A color code between 0-9 or a-f. Set to 'none' to disable.
-ops-name-color: '4'
+ops-name-color: 'none'
 
 # The character(s) to prefix all nicknames, so that you know they are not true usernames.
-nickname-prefix: '~'
+nickname-prefix: '^'
 
 # The maximum length allowed in nicknames. The nickname prefix is included in this.
 max-nick-length: 15
@@ -49,7 +49,7 @@ teleport-delay: 0
 
 # The delay, in seconds, a player can't be attacked by other players after they have been teleported by a command.
 # This will also prevent the player attacking other players.
-teleport-invulnerability: 4
+teleport-invulnerability: 10
 
 # The delay, in seconds, required between /heal attempts.
 heal-cooldown: 60
@@ -134,85 +134,6 @@ socialspy-commands:
 # Whitelist the commands and permissions you wish to give players by default (everything else is op only).
 # These are the permissions without the "essentials." part.
 player-commands:
-  - afk
-  - afk.auto
-  - back
-  - back.ondeath
-  - balance
-  - balance.others
-  - balancetop
-  - build
-  - chat.color
-  - chat.format
-  - chat.shout
-  - chat.question
-  - clearinventory
-  - compass
-  - depth
-  - delhome
-  - getpos
-  - geoip.show
-  - help
-  - helpop
-  - home
-  - home.others
-  - ignore
-  - info
-  - itemdb
-  - kit
-  - kits.tools
-  - list
-  - mail
-  - mail.send
-  - me
-  - motd
-  - msg
-  - msg.color
-  - nick
-  - near
-  - pay
-  - ping
-  - protect
-  - r
-  - rules
-  - realname
-  - seen
-  - sell
-  - sethome
-  - setxmpp
-  - signs.create.protection
-  - signs.create.trade
-  - signs.break.protection
-  - signs.break.trade
-  - signs.use.balance
-  - signs.use.buy
-  - signs.use.disposal
-  - signs.use.enchant
-  - signs.use.free
-  - signs.use.gamemode
-  - signs.use.heal
-  - signs.use.info
-  - signs.use.kit
-  - signs.use.mail
-  - signs.use.protection
-  - signs.use.repair
-  - signs.use.sell
-  - signs.use.time
-  - signs.use.trade
-  - signs.use.warp
-  - signs.use.weather
-  - spawn
-  - suicide
-  - time
-  - tpa
-  - tpaccept
-  - tpahere
-  - tpdeny
-  - warp
-  - warp.list
-  - world
-  - worth
-  - xmpp
 
 # Note: All items MUST be followed by a quantity!
 # All kit names should be lower case, and will be treated as lower in permissions/costs.
@@ -221,35 +142,65 @@ player-commands:
 # 'delay' refers to the cooldown between how often you can use each kit, measured in seconds.
 # For more information, visit http://wiki.ess3.net/wiki/Kits
 kits:
-  tools:
-    delay: 10
+  newbie:
+    delay: 800
     items:
-      - 272 1
       - 273 1
       - 274 1
       - 275 1
-  dtools:
-    delay: 600
+      - 50 10
+      - 54 1
+  glowstone-320:
+    delay: 2
     items:
-      - 278 1 efficiency:1 durability:1 fortune:1 name:&4Gigadrill lore:The_drill_that_&npierces|the_heavens
-      - 277 1 digspeed:3 name:Dwarf lore:Diggy|Diggy|Hole
-      - 298 1 color:255,255,255 name:Top_Hat lore:Good_day,_Good_day
-      - 279:780 1
-  notch:
-    delay: 6000
+      - 89 32
+  grass-320:
+    delay: 2
     items:
-      - 397:3 1 player:Notch
-  color:
-    delay: 6000
+      - 2 32
+  pumpkin-320:
+    delay: 2
     items:
-      - 387 1 title:&4Book_&9o_&6Colors author:KHobbits lore:Ingame_color_codes book:Colors
-  firework:
-    delay: 6000
+      - 86 32
+  sponge-320:
+    delay: 2
     items:
-      - 401 1 name:Angry_Creeper color:red fade:green type:creeper power:1
-      - 401 1 name:StarryNight color:yellow,orange fade:blue type:star effect:trail,twinkle power:1
-      - 401 2 name:SolarWind color:yellow,orange fade:red shape:large effect:twinkle color:yellow,orange fade:red shape:ball effect:trail color:red,purple fade:pink shape:star effect:trail power:1
-
+      - 19 32
+  ice-320:
+    delay: 2
+    items:
+      - 79 32
+  snow-320:
+    delay: 2
+    items:
+      - 80 32
+  clay-320:
+    delay: 2
+    items:
+      - 80 32
+  mossycobble-640:
+    delay: 2
+    items:
+      - 48 32
+  TBR-3330:
+    delay: 800
+    items:
+      - 278 1
+      - 348 1
+      - 316 1
+      - 290 1
+      - 332 2
+      - 318 1
+      - 341 1
+      - 77 1
+  minecart-25:
+    delay: 5
+    items:
+      - 328 1
+  goldingot-640:
+    delay: 5
+    items:
+      - 266 64
 # Essentials Sign Control
 # See http://wiki.ess3.net/wiki/Sign_Tutorial for instructions on how to use these.
 # To enable signs, remove # symbol. To disable all signs, comment/remove each sign.
@@ -257,25 +208,22 @@ kits:
 # Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.
 
 enabledSigns:
-  #- color
-  #- balance
-  #- buy
-  #- sell
-  #- trade
-  #- free
-  #- disposal
-  #- warp
-  #- kit
-  #- mail
-  #- enchant
-  #- gamemode
-  #- heal
-  #- info
-  #- spawnmob
-  #- repair
-  #- time
-  #- weather
-
+  - balance
+  - buy
+  - sell
+  - trade
+  - free
+  - disposal
+  - warp
+  - kit
+  - mail
+  - enchant
+  - gamemode
+  - heal
+  - spawnmob
+  - time
+  - weather
+  - protection
 # How many times per second can Essentials signs be interacted with per player.
 # Values should be between 1-20, 20 being virtually no lag protection.
 # Lower numbers will reduce the possibility of lag, but may annoy players.
@@ -339,7 +287,7 @@ freeze-afk-players: false
 
 # When the player is afk, should he be able to pickup items?
 # Enable this, when you don't want people idling in mob traps.
-disable-item-pickup-while-afk: false
+disable-item-pickup-while-afk: true
 
 # This setting controls if a player is marked as active on interaction.
 # When this setting is false, you will need to manually un-AFK using the /afk command.
@@ -384,10 +332,10 @@ unsafe-enchantments: false
 
 #Do you want essentials to keep track of previous location for /back in the teleport listener?
 #If you set this to true any plugin that uses teleport will have the previous location registered.
-register-back-in-listener: false
+register-back-in-listener: true
 
 #Delay to wait before people can cause attack damage after logging in.
-login-attack-delay: 5
+login-attack-delay: 10
 
 #Set the max fly speed, values range from 0.1 to 1.0
 max-fly-speed: 0.8
@@ -422,15 +370,20 @@ world-home-permissions: false
 # People with essentials.sethome.multiple.unlimited are not limited by these numbers.
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
-  default: 3
+  # essentials.sethome.multiple
+  default: 1
+  # essentials.sethome.multiple.sponsor
+  sponsor: 30
   # essentials.sethome.multiple.vip
-  vip: 5
+  vip: 50
+  # essentials.sethome.multiple.supervip
+  supervip: 100
   # essentials.sethome.multiple.staff
-  staff: 10
+  staff: 30
 
 # Set timeout in seconds for players to accept tpa before request is cancelled.
 # Set to 0 for no timeout.
-tpa-accept-cancellation: 120
+tpa-accept-cancellation: 60
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -441,25 +394,43 @@ tpa-accept-cancellation: 120
 # For more information, visit http://wiki.ess3.net/wiki/Essentials_Economy
 
 # Defines the balance with which new players begin.  Defaults to 0.
-starting-balance: 0
+starting-balance: 1000
 
 # worth-# defines the value of an item when it is sold to the server via /sell.
 # These are now defined in worth.yml
 
 # Defines the cost to use the given commands PER USE.
 # Some commands like /repair have sub-costs, check the wiki for more information.
+
 command-costs:
   # /example costs $1000 PER USE
   #example: 1000
   # /kit tools costs $1500 PER USE
   #kit-tools: 1500
+  nick: 60
+  tpa: 15
+  back: 10
+  tpahere: 15
+  time: 80
+  weather: 80
+  kit-glowstone-320: 320
+  kit-grass-320: 320
+  kit-pumpkin-320: 320
+  kit-sponge-320: 320
+  kit-ice-320: 320
+  kit-snow-320: 320
+  kit-clay-320: 320
+  kit-mossycobble-640: 640
+  kit-TBR-3300: 320
+  kit-minecart-25: 25
+  kit-goldingot-640: 640
 
 # Set this to a currency symbol you want to use.
-currency-symbol: '$'
+currency-symbol: 'K'
 
 # Set the maximum amount of money a player can have.
 # The amount is always limited to 10 trillion because of the limitations of a java double.
-max-money: 10000000000000
+max-money: 100000000000
 
 # Set the minimum amount of money a player can have (must be above the negative of max-money).
 # Setting this to 0, will disable overdrafts/loans completely.  Users need 'essentials.eco.loan' perm to go below 0.
@@ -503,7 +474,7 @@ chat:
   # If set to the default chat format which "should" be compatible with ichat.
   # For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
+  format: '{DISPLAYNAME}: {MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
 
   group-formats:
@@ -545,7 +516,7 @@ protect:
     creeper-playerdamage: false
     creeper-blockdamage: false
     enderdragon-blockdamage: true
-    enderman-pickup: false
+    enderman-pickup: true
     villager-death: false
     # Monsters won't follow players.
     # permission essentials.protect.entitytarget.bypass disables this.
@@ -590,7 +561,7 @@ protect:
   # Disable various default physics and behaviors.
   disable:
     # Should fall damage be disabled?
-    fall: false
+    fall: true
 
     # Users with the essentials.protect.pvp permission will still be able to attack each other if this is set to true.
     # They will be unable to attack users without that same permission node.
@@ -658,10 +629,10 @@ protect:
   blacklist:
 
     # Which blocks should people be prevented from placing?
-    placement: 10,11,46,327
+    placement: 10,11
 
     # Which items should people be prevented from using?
-    usage: 327
+    usage:
 
     # Which blocks should people be prevented from breaking?
     break:
@@ -683,7 +654,7 @@ newbies:
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
   #announce-format: ''
-  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
+  announce-format: '&d{DISPLAYNAME}&d has joined for the first time! ZOMGWTFBBQ!'
 
   # When we spawn for the first time, which spawnpoint do we use?
   # Set to "none" if you want to use the spawn point of the world.
@@ -692,12 +663,12 @@ newbies:
   # Do we want to give users anything on first join? Set to '' to disable
   # This kit will be given regardless of cost, and permissions.
   #kit: ''
-  kit: tools
+  kit: newbie
 
 # Set this to lowest, if you want Multiverse to handle the respawning.
 # Set this to high, if you want EssentialsSpawn to handle the respawning.
 # Set this to highest, if you want to force EssentialsSpawn to handle the respawning.
-respawn-listener-priority: high
+respawn-listener-priority: lowest
 
 # When users die, should they respawn at their first home or bed, instead of the spawnpoint?
 respawn-at-home: false
