@@ -38,6 +38,24 @@ settings:
       centralius_the_end:
       - users
       - groups
+      temp16:
+      - users
+      - groups
+      temp16_nether:
+      - users
+      - groups
+      temp16_the_end:
+      - users
+      - groups
+      world_old:
+      - users
+      - groups
+      world_old_nether:
+      - users
+      - groups
+      world_old_the_end:
+      - users
+      - groups
     #  world2:      (World2 would have it's own set of user and groups files)
     #    world3:
     #    - users    (World3 would use the users.yml from world2, but it's own groups.yml)
