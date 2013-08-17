@@ -1,0 +1,54 @@
+cheats:
+  zmbzcheat:
+    code: '&f &f &2 &0 &4 &8 '
+    block: true
+  zmbnoclip:
+    code: '&f &f &4 &0 &9 &6 '
+    block: true
+  cjbxray:
+    code: '&3 &9 &2 &0 &0 &2 '
+    block: true
+  reicave:
+    code: '&0&0&1&e&f'
+    block: false
+  automap-ore:
+    code: '&0&0&1&f&e'
+    block: true
+  automap-cave:
+    code: '&0&0&2&f&e'
+    block: true
+  smart-climb:
+    code: '&0&1&0&1&2&f&f'
+    block: true
+  smart-swim:
+    code: '&0&1&3&4&f&f'
+    block: true
+  smart-crawl:
+    code: '&0&1&5&f&f'
+    block: true
+  smart-slide:
+    code: '&0&1&6&f&f'
+    block: true
+  smart-jump:
+    code: '&0&1&8&9&a&b&f&f'
+    block: true
+fly:
+  zmbfly:
+    code: '&f &f &1 &0 &2 &4 '
+    block: true
+  cjbfly:
+    code: '&3 &9 &2 &0 &0 &1 '
+    block: true
+  smart-fly:
+    code: '&0&1&7&f&f'
+    block: true
+radar:
+  cjbradar:
+    code: '&3 &9 &2 &0 &0 &3 '
+    block: true
+  reiradar:
+    code: '&0&0&2&3&4&5&6&7&e&f'
+    block: false
+  automap-radar:
+    code: '&0&0&3&4&5&6&7&8&f&e'
+    block: true
