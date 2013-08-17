@@ -1,6 +1,8 @@
 # Plugins
 plugins/dynmap/web/**/*
+plugins/dynmap/ids-by-ip.txt
 plugins/Essentials/userdata/**/*
+plugins/Essentials/warps/**/*
 plugins/GroupManager/backup/**/*
 plugins/GroupManager/worlds/**/*
 # Home stuff
