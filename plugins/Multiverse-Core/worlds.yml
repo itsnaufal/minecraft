@@ -43,7 +43,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '-5378418627812170564'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   temp16_the_end:
@@ -90,7 +90,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '82850591'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   world_old_nether:
@@ -137,7 +137,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '437975017'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   centralius:
@@ -184,7 +184,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '-5378418627812170564'
+    seed: '2875626657924494801'
     generator: 'null'
     playerLimit: '-1'
   centralius_nether:
@@ -231,7 +231,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '-5378418627812170564'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   temp16_nether:
@@ -278,54 +278,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '82850591'
-    generator: 'null'
-    playerLimit: '-1'
-  Inverness:
-    ==: MVWorld
-    hidden: 'false'
-    alias: Inverness
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: NORMAL
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-      currency: '-1'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: CREATIVE
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      yaw: 180.0
-      pitch: 0.0
-      z: 0.5
-      y: 2.0
-      x: 0.5
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '-1656200156529051849'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   world_old_the_end:
@@ -372,7 +325,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '437975017'
+    seed: '1230276068811357891'
     generator: 'null'
     playerLimit: '-1'
   world_old:
@@ -466,6 +419,6 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '82850591'
+    seed: '-376008672'
     generator: 'null'
     playerLimit: '-1'

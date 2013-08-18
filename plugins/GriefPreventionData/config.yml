@@ -3,6 +3,12 @@ GriefPrevention:
     centralius: -1
     centralius_nether: -1
     centralius_the_end: -1
+    temp16_the_end: -1
+    world_old_nether: -1
+    temp16_nether: -1
+    world_old_the_end: -1
+    world_old: -1
+    temp16: -1
   Claims:
     Expiration:
       ChestClaimDays: 7
@@ -49,7 +55,9 @@ GriefPrevention:
     AllowedIpAddresses: 1.2.3.4; 5.6.7.8
     DeathMessageCooldownSeconds: 60
   PvP:
-    Worlds: []
+    Worlds:
+    - centralius
+    - centralius_nether
     ProtectFreshSpawns: true
     PunishLogout: true
     CombatTimeoutSeconds: 15

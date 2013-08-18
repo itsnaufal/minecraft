@@ -1,8 +1,13 @@
 # Plugins
 plugins/dynmap/web/**/*
+plugins/dynmap/ids-by-ip.txt
 plugins/Essentials/userdata/**/*
+plugins/Essentials/warps/**/*
 plugins/GroupManager/backup/**/*
 plugins/GroupManager/worlds/**/*
+plugins/Multiverse-Inventories/groups/**/*
+plugins/Multiverse-Inventories/players/**/*
+plugins/Multiverse-Inventories/worlds/**/*
 # Home stuff
 .bash_history
 .bash_logout
@@ -28,7 +33,7 @@ plugins/GroupManager/worlds/**/*
 *.lck
 *.1
 .server.log.swp
-
+crash-reports/**/*
 ## maps
 maps/*
 */level.*

@@ -5,8 +5,25 @@
 groups:
   default:
     worlds:
-    - centralius_the_end
-    - centralius_nether
     - centralius
+    - centralius_nether
+    - centralius_the_end
+    - world
+    - world_nether
+    - world_the_end
+    shares:
+    - all
+  Temp16:
+    worlds:
+    - temp16
+    - temp16_nether
+    - temp16_the_end
+    shares:
+    - all
+  Limbo:
+    worlds:
+    - world_old
+    - world_old_nether
+    - world_old_the_end
     shares:
     - all
