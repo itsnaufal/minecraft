@@ -1,5 +1,6 @@
 # Plugins
 plugins/dynmap/web/**/*
+plugins/dynmap/*.pending
 plugins/dynmap/ids-by-ip.txt
 plugins/Essentials/userdata/**/*
 plugins/Essentials/warps/**/*
@@ -44,7 +45,8 @@ maps/*
 */session.lock
 */uid.dat
 */data/*.dat
-
+map_10000
+map_134
 ## Nether and The End
 */DIM*/level.*
 */DIM*/region/*.mcr
