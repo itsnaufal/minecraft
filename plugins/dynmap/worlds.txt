@@ -42,11 +42,8 @@ worlds:
     sendhealth: true
     bigworld: false
     extrazoomout: 2
-    visibilitylimits:
-    - x0: 5000
-      z0: -5000
-      x1: 5000
-      z1: 5000
+    visibilitylimits: [
+        ]
     hiddenlimits: [
         ]
     autogenerate-to-visibilitylimits: true
@@ -73,11 +70,8 @@ worlds:
     sendhealth: true
     bigworld: false
     extrazoomout: 2
-    visibilitylimits:
-    - x0: 5000
-      z0: -5000
-      x1: 5000
-      z1: 5000
+    visibilitylimits: [
+        ]
     hiddenlimits: [
         ]
     autogenerate-to-visibilitylimits: true
