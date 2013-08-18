@@ -5,6 +5,7 @@ plugins/Essentials/userdata/**/*
 plugins/Essentials/warps/**/*
 plugins/GroupManager/backup/**/*
 plugins/GroupManager/worlds/**/*
+plugins/GriefPreventionData/PlayerData/**/*
 plugins/Multiverse-Inventories/groups/**/*
 plugins/Multiverse-Inventories/players/**/*
 plugins/Multiverse-Inventories/worlds/**/*
