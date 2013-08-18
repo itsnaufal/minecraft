@@ -56,6 +56,8 @@ settings:
       world_old_the_end:
       - users
       - groups
+      inverness:
+      - users
     #  world2:      (World2 would have it's own set of user and groups files)
     #    world3:
     #    - users    (World3 would use the users.yml from world2, but it's own groups.yml)

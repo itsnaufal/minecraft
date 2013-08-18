@@ -40,3 +40,9 @@ worlds:
     radiusX: 5000
     radiusZ: 5000
     wrapping: false
+  inverness:
+    x: 0.0
+    z: 0.0
+    radiusX: 1000
+    radiusZ: 1000
+    wrapping: false

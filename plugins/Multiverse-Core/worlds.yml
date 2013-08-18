@@ -375,6 +375,53 @@ worlds:
     seed: '-376008672'
     generator: 'null'
     playerLimit: '-1'
+  inverness:
+    ==: MVWorld
+    hidden: 'false'
+    alias: Inverness
+    color: WHITE
+    style: NORMAL
+    pvp: 'true'
+    scale: '1.0'
+    respawnWorld: ''
+    allowWeather: 'true'
+    difficulty: NORMAL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: '0.0'
+      currency: '-1'
+    hunger: 'true'
+    autoHeal: 'true'
+    adjustSpawn: 'true'
+    portalForm: ALL
+    gameMode: CREATIVE
+    keepSpawnInMemory: 'true'
+    spawnLocation:
+      ==: MVSpawnLocation
+      yaw: 180.0
+      pitch: 0.0
+      z: 0.5
+      y: 2.0
+      x: 0.5
+    autoLoad: 'true'
+    bedRespawn: 'true'
+    worldBlacklist: []
+    environment: NORMAL
+    seed: '-1656200156529051849'
+    generator: 'null'
+    playerLimit: '-1'
   temp16:
     ==: MVWorld
     hidden: 'false'
@@ -419,6 +466,6 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '-376008672'
+    seed: '82850591'
     generator: 'null'
     playerLimit: '-1'
