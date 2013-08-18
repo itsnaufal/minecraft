@@ -9,7 +9,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -90,7 +90,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '1230276068811357891'
+    seed: '82850591'
     generator: 'null'
     playerLimit: '-1'
   world_old_nether:
@@ -137,7 +137,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '1230276068811357891'
+    seed: '437975017'
     generator: 'null'
     playerLimit: '-1'
   centralius:
@@ -197,7 +197,7 @@ worlds:
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
-    difficulty: EASY
+    difficulty: NORMAL
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -278,7 +278,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '1230276068811357891'
+    seed: '82850591'
     generator: 'null'
     playerLimit: '-1'
   world_old_the_end:
@@ -325,7 +325,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '1230276068811357891'
+    seed: '437975017'
     generator: 'null'
     playerLimit: '-1'
   world_old:
