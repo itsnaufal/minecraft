@@ -15,6 +15,8 @@ groups:
     - worldedit.navigation.jumpto
     - worldedit.navigation.thru
   g:operator:
+    inheritance:
+    - g:moderator
     permissions:
     - -logblock.ignoreRestrictions
     - -logblock.clearlog
@@ -39,12 +41,14 @@ groups:
     - worldedit.*
     - worldguard.*
   g:owner:
+    inheritance:
+    - g:operator
     permissions:
     - '*'
     - bukkit.*
-    - showcase.basic
-    - showcase.admin
   g:moderator:
+    inheritance:
+    - g:member
     permissions:
     - essentials.back
     - essentials.ban
@@ -87,67 +91,23 @@ groups:
     - logblock.*
     - multiverse.teleport.other.*
     - spectate.use
+    - -logblock.rollback
+    - essentials.hat
+    - essentials.list.hidden
+    - essentials.vanish
+    - lb
   g:sponsor:
+    inheritance:
+    - g:member
     permissions:
     - essentials.sethome.multiple.sponsor
-  g:hardcore_member:
-    permissions:
-    - essentials.afk
-    - essentials.back
-    - essentials.back.ondeath
-    - essentials.balance
-    - essentials.balance.others
-    - essentials.balancetop
-    - essentials.chat.color
-    - essentials.chat.question
-    - essentials.home
-    - essentials.ignore
-    - essentials.mail
-    - essentials.mail.send
-    - essentials.me
-    - essentials.msg
-    - essentials.nick
-    - essentials.pay
-    - essentials.ping
-    - essentials.realname
-    - essentials.seen
-    - essentials.sell
-    - essentials.signs.break.disposal
-    - essentials.signs.break.mail
-    - essentials.signs.break.trade
-    - essentials.signs.create.disposal
-    - essentials.signs.create.mail
-    - essentials.signs.create.trade
-    - essentials.signs.use.*
-    - essentials.suicide
-    - essentials.time
-    - essentials.time.set
-    - essentials.tpa
-    - essentials.tpaccept
-    - essentials.tpahere
-    - essentials.tpdeny
-    - essentials.warp
-    - essentials.warp.list
-    - essentials.worth
-    - multiverse.core.list.worlds
-    - multiverse.portal.access.*
-    - multiverse.portal.list
-    - scs.create.buy
-    - scs.create.display
-    - scs.create.sell
-    - scs.manage
-    - scs.remove
-    - scs.use
   g:vip:
+    inheritance:
+    - g:sponsor
     permissions:
     - essentials.sethome.multiple.vip
     - essentials.stack
     - essentials.weather
-    - movecraft.airship.*
-    - worldedit.navigation.jumpto
-    - worldedit.navigation.thru
-    - worldguard.stack
-    - worldguard.stack.illegitimate
   g:visitor:
     permissions:
     - essentials.delhome
@@ -169,6 +129,8 @@ groups:
     - multiverse.portal.access.*
     - multiverse.teleport.self.*
   g:member:
+    inheritance:
+    - g:visitor
     permissions:
     - essentials.afk
     - essentials.back
@@ -219,5 +181,7 @@ groups:
     - scs.remove
     - scs.use
   g:supervip:
+    inheritance:
+    - g:vip
     permissions:
     - essentials.sethome.multiple.supervip
