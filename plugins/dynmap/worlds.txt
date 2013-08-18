@@ -3,9 +3,9 @@ worlds:
     title: Centralius World Hub
     enabled: true
     center:
-        x: -261.0
+        x: -442.0
         y: 68.0
-        z: 969.0
+        z: 893.0
     sendposition: true
     sendhealth: true
     bigworld: false
