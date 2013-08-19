@@ -397,3 +397,76 @@ Messages:
     Text: This claim has been locked.  If you really want to abandon it, use /AbandonClaim again.
   LoginSpamWait:
     Text: You must wait {0} more minutes before logging-in again.
+  CantSiegeYourself:
+    Text: You cannot lay siege on yourself!
+  AbandonCost:
+    Text: you lose {0} Claim blocks from abandoning this claim.
+    Notes: 0:Number of claim blocks lost
+  AbandonCostWarning:
+    Text: You will lose {0} Claim blocks if you abandon this claim. enter /abandonclaim again to confirm.
+    Notes: 0:Number of claim blocks that will be lost
+  NoOwnerTrust:
+    Text: Only {0} Can do that here.
+    Notes: 0:Owner of the claim
+  ResizeFailOutsideParent:
+    Text: Cannot resize subdivision as it would extend outside the containing claim.
+  PlayerClaimLimit:
+    Text: You have reached the claim limit ({0}) and cannot create new claims.
+    Notes: 0:Configuration Claim Limit.
+  AbandonClaimRestoreWarning:
+    Text: Abandoning this claim will restore nature! If you still want to abandon it, use /abandonclaim again.
+  NoVillagerTradeOutsideClaims:
+    Text: You cannot trade with Villagers outside of Claims.
+  ClearManagersNotFound:
+    Text: You must be in a claim to clear it's Managers.
+  ClearManagersNotOwned:
+    Text: Only {0} can clear managers in their Claim.
+    Notes: 0:Claim Owner
+  ClearManagersSuccess:
+    Text: Cleared all Managers in this Claim.
+  ClearManagersNotAdmin:
+    Text: Only Administrators can change managers on an admin claim.
+  GroupNotFound:
+    Text: Group {0} Not found.
+    Notes: 0:Name of Group
+  ConfigDisabled:
+    Text: '{0} has been disabled for this location.'
+    Notes: 0:name of operation
+  TamedDeathDefend:
+    Text: A {0} has been killed in defense of your Claim!
+    Notes: 0:Type of tamed animal;1:Attacker
+  NoGiveClaimsPermission:
+    Text: You do not have Permission to Give your Claims to other players
+  NoAdminClaimsPermission:
+    Text: You need Administrator Claims Permission to do that.
+  GiveSuccessSender:
+    Text: Claim Owner changed from {0} to {1} Successfully.
+    Notes: 0:Sender;1:Recipient
+  GiveSuccessTarget:
+    Text: '{0} has transferred a Claim to you.'
+    Notes: 0:Sender
+  RemainingBlocksWorld:
+    Text: You may claim up to {0} more blocks in this world.
+    Notes: '0: remaining blocks in world'
+  RemainingClaimsWorld:
+    Text: You may make {0} more claims in this world.
+    Notes: '0: remaining claims in world.'
+  InsufficientWorldBlocks:
+    Text: You've used too many claim blocks in this world. You need to free up {0} to make that claim.
+    Notes: '0: required claim blocks'
+  BlockPlacementTooClose:
+    Text: You cannot place this within {0} Blocks of an existing claim.
+    Notes: 0:Number of max blocks
+  LoginSpamWaitSeconds:
+    Text: You must wait {0} more seconds before logging-in again.
+  AutoSubClaimsEnter:
+    Text: Switching to Subdivide Claim Mode
+  AutoSubClaimsExit:
+    Text: Switching to Standard Claim Mode
+  AutoSubClaimsNoPermission:
+    Text: You need permission in a claim to make subdivisions.
+  ResizeTooFewBlocks:
+    Text: 'Missing message!  ID: ResizeTooFewBlocks.  Please contact a server admin.'
+  CreateClaimTooFewBlocks:
+    Text: That claim would not cover enough blocks. Claims must use at least {0} Blocks
+    Notes: 0:Number of minimum blocks on a claim

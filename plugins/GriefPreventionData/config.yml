@@ -12,16 +12,21 @@ GriefPrevention:
     temp16: -1
   Claims:
     Expiration:
-      ChestClaimDays: 7
-      UnusedClaimDays: 14
+      ChestClaimDays: 0
+      UnusedClaimDays: 0
       AllClaimDays: 0
       AutomaticNatureRestoration:
         SurvivalWorlds: false
         CreativeWorlds: true
     Worlds:
     - centralius
-    - centralius_nether
-    - centralius_the_end
+    - world_old
+    - world_old_nether
+    - world_old_the_end
+    - inverness
+    - temp16
+    - temp16_nether
+    - temp16_the_end
     CreativeRulesWorlds: []
     PreventTheft: true
     ProtectCreatures: true
@@ -30,35 +35,40 @@ GriefPrevention:
     LockTrapDoors: false
     LockFenceGates: true
     EnderPearlsRequireAccessTrust: true
-    InitialBlocks: 100
-    BlocksAccruedPerHour: 100
-    MaxAccruedBlocks: 80000
+    InitialBlocks: 1000
+    BlocksAccruedPerHour: 10
+    MaxAccruedBlocks: 10000
     AutomaticNewPlayerClaimsRadius: 4
-    ExtendIntoGroundDistance: 5
+    ExtendIntoGroundDistance: 256
     CreationRequiresPermission: false
-    MinimumSize: 10
+    MinimumSize: 1
     MaximumDepth: 0
     IdleLimitDays: 0
-    TrappedCommandCooldownHours: 8
+    TrappedCommandCooldownHours: 1
     InvestigationTool: STICK
     ModificationTool: GOLD_SPADE
     NoSurvivalBuildingOutsideClaims: false
-    WarnWhenBuildingOutsideClaims: true
+    WarnWhenBuildingOutsideClaims: false
     AllowUnclaimingCreativeModeLand: true
     AutoRestoreUnclaimedCreativeLand: true
   Spam:
-    Enabled: true
+    Enabled: false
     LoginCooldownMinutes: 2
     MonitorSlashCommands: /me;/tell;/global;/local
-    WarningMessage: Please reduce your noise level.  Spammers will be banned.
+    WarningMessage: SHUT THE FUCK UP, YOU'RE PENDING FOR A BENDING
     BanOffenders: true
     BanMessage: Banned for spam.
     AllowedIpAddresses: 1.2.3.4; 5.6.7.8
     DeathMessageCooldownSeconds: 60
   PvP:
     Worlds:
-    - centralius
-    - centralius_nether
+    - world_old
+    - world_old_nether
+    - world_old_the_end
+    - inverness
+    - temp16
+    - temp16_nether
+    - temp16_the_end
     ProtectFreshSpawns: true
     PunishLogout: true
     CombatTimeoutSeconds: 15
@@ -68,15 +78,15 @@ GriefPrevention:
       PlayerOwnedClaims: true
       AdministrativeClaims: true
   Trees:
-    RemoveFloatingTreetops: true
-    RegrowGriefedTrees: true
+    RemoveFloatingTreetops: false
+    RegrowGriefedTrees: false
   Economy:
     ClaimBlocksPurchaseCost: 0.0
     ClaimBlocksSellValue: 0.0
   BlockSurfaceCreeperExplosions: true
   BlockSurfaceOtherExplosions: true
-  LimitSurfaceWaterBuckets: true
-  LimitSkyTrees: true
+  LimitSurfaceWaterBuckets: false
+  LimitSkyTrees: false
   FireSpreads: false
   FireDestroys: false
   AddItemsToClaimedChests: true

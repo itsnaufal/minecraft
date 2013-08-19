@@ -7,6 +7,9 @@ plugins/Essentials/warps/**/*
 plugins/GroupManager/backup/**/*
 plugins/GroupManager/worlds/**/*
 plugins/GriefPreventionData/PlayerData/**/*
+plugins/GriefPreventionData/ClaimData/**/*
+plugins/GriefPrevention/ClaimData/**/*
+plugins/GriefPrevention/PlayerData/**/*
 plugins/Multiverse-Inventories/groups/**/*
 plugins/Multiverse-Inventories/players/**/*
 plugins/Multiverse-Inventories/worlds/**/*

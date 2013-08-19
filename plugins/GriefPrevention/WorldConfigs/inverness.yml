@@ -1,0 +1,619 @@
+GriefPrevention:
+  PvP:
+    Enabled: true
+    BlockContainers: true
+    ProtectFreshSpawns: true
+    PunishLogout: true
+    CombatTimeoutSeconds: 15
+    AllowCombatItemDrop: false
+    BlockedSlashCommands: /home;/vanish;/spawn;/tpa
+    ProtectPlayersInLandClaims:
+      PlayerOwnedClaims: true
+      AdministrativeClaims: true
+  SeaLevelOverride:
+    Enabled: false
+  Rules:
+    SilverfishBreak:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: Disabled
+    CreeperExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: Disabled
+    WitherExplosions:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: Disabled
+    TNTExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    OtherExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    BlockDamageCreeperExplosion:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: Disabled
+    BlockDamageWitherExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: Disabled
+    WitherEating:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: Disabled
+    BlockDamageTNTExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    BlockDamageOtherExplosions:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    WaterBuckets:
+      Place:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireBuild
+      Fill:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireBuild
+    LavaBuckets:
+      Place:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Allow
+          RequiredPermissions:
+          - GriefPrevention.Lava
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireBuild
+      Fill:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireBuild
+    BuildIronGolem:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    BuildSnowGolem:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    BuildWither:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    TrashBlockPlacementRules:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireBuild
+    VillagerTrading:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    EnvironmentalVehicleDamage:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    ZombieDoorBreaking:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    SheepShearing:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    SheepDyeing:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    BonemealGrass:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireBuild
+    PlayerCropTrample:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireBuild
+    EndermanPickup:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    EndermanPlacement:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    ArrowsHitWoodButtons:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    BlockTweaking:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    Containers:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    CreatureDamage:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    WoodenDoors:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    TrapDoors:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    FenceGates:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    EnderPearlOrigin:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    EnderPearlTarget:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    StonePressurePlates:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    WoodenPressurePlates:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    ArrowWoodenPressurePlate:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireNone
+    StoneButton:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    WoodenButton:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    Levers:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    Beds:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    FireExtinguishing:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireBuild
+    FireSetting:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        RequiredPermissions:
+        - GriefPrevention.Lava
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireBuild
+    Breeding:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    Taming:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    LeadUsage:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    EquineInventory:
+      Wilderness:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+      Claims:
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
+        ClaimControl: RequireNone
+    NameTags:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireContainer
+    Feeding:
+      Wilderness:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+      Claims:
+        AboveSeaLevel: Allow
+        BelowSeaLevel: Allow
+        ClaimControl: RequireAccess
+    Dispensers:
+      Lava:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Deny
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Water:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Arrows:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Deny
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      FireCharges:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Deny
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      FlintandSteel:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Deny
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      PositivePotions:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      NegativePotions:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      SpawnEggs:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Fireworks:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Snowballs:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Eggs:
+        Wilderness:
+          AboveSeaLevel: Deny
+          BelowSeaLevel: Deny
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+      Misc:
+        Wilderness:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+        Claims:
+          AboveSeaLevel: Allow
+          BelowSeaLevel: Allow
+          ClaimControl: RequireNone
+  Siege:
+    ItemTransfer: true
+    BlockRevert: false
+    Enabled: false
+    BreakableBlocks:
+    - DIRT
+    - GRASS
+    - LONG_GRASS
+    - COBBLESTONE
+    - GRAVEL
+    - SAND
+    - GLASS
+    - THIN_GLASS
+    - WOOD
+    - WOOL
+    - SNOW
+  Spam:
+    DelayThreshold: 1500
+    CapsMinLength: 4
+    AlphaNumMinLength: 5
+    ASCIIArtMinLength: 15
+    ShortMessageMaxLength: 5
+    KickThreshold: 6
+    BanThreshold: 8
+    MuteThreshold: 4
+    LoginCooldownSeconds: 60
+    Enabled: false
+    MonitorSlashCommands: /me;/tell;/global;/local
+    WarningMessage: Please reduce your noise level.  Spammers will be banned.
+    KickMessage: Kicked for spamming.
+    BanMessage: Banned for spamming.
+    AllowedIpAddresses: 1.2.3.4; 5.6.7.8
+    DeathMessageCooldownSeconds: 60
+    KickCommand: kick {0}
+    BanCommand: ban {0};kick {0}
+  Claims:
+    InsufficientSneakResetBound: 0
+    SiegeTamedAnimalDistance: 20
+    Enabled: true
+    MaxClaimBlocks: 0
+    BlocksAccruedPerHour: 100.0
+    AbandonReturnRatio: 1.0
+    PerPlayerLimit: 0
+    SeigeLootChests: 0
+    AbandonAutoRestore: false
+    Expiration:
+      ChestClaimDays: 7
+      UnusedClaimDays: 14
+      AllClaimDays: 0
+      AutomaticNatureRestoration: false
+    AutomaticNewPlayerClaimsRadius: 4
+    ExtendIntoGroundDistance: 5
+    CreationRequiresPermission: false
+    MinimumSize: 10
+    MinimumBlocks: 100
+    MaximumDepth: 0
+    TrappedCommandCooldownMinutes: 480
+    InvestigationTool: STICK
+    ModificationTool: GOLD_SPADE
+    NoSurvivalBuildingOutsideClaims: false
+    WarnWhenBuildingOutsideClaims: true
+    AllowUnclaimingLand: true
+    AutoRestoreUnclaimedLand: true
+    WildernessWarningBlockCount: 15
+  CleanupTasks:
+    Entity: true
+  ClaimCleanup:
+    MaximumSize: 25
+    MaxInvestmentScore: 100
+    Enabled: true
+  Expiration:
+    MessageCooldown:
+      Claim: 0
+      Stuck: 0
+  CreativeRules: false
+  Eavesdrop:
+    Enabled: false
+    Signs: true
+    BookDrop: false
+    WhisperCommands: /tell;/pm;/r
+  Trees:
+    RemoveFloatingTreetops: true
+    RegrowGriefedTrees: true
+  LimitSkyTrees: true
+  FireSpreads: false
+  FireDestroys: false
+  AddItemsToClaimedChests: true
+  SmartBan: true
+  CreaturesTrampleCrops: false
+  Mods:
+    BlockIdsRequiringAccessTrust: []
+    BlockIdsRequiringContainerTrust: []
+    PlayersIgnoringAllClaims: []
