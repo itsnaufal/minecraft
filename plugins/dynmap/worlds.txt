@@ -60,7 +60,7 @@ worlds:
         mapzoomin: 4
         append_to_world: ''
 -   name: world_old
-    title: World Old
+    title: Limbo
     enabled: true
     center:
         x: 800.0
@@ -98,11 +98,8 @@ worlds:
     sendhealth: true
     bigworld: false
     extrazoomout: 2
-    visibilitylimits:
-    - x0: 2000
-      z0: -2000
-      x1: 2000
-      z1: 2000
+    visibilitylimits: [
+        ]
     hiddenlimits: [
         ]
     autogenerate-to-visibilitylimits: true
