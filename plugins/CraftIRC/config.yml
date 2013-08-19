@@ -77,57 +77,56 @@ settings:
     #### IRC FORMATTING: %b% %u% %r% %o% %k% %kNUM% (NUM is 0 to 15); Do the same as CTRL+key in mIRC (%o% uses'foreground')
 
     #==========Classic formatting==========
-    from-game:
-      chat: '(%sender%%o%) %message%'
-      private: '(%sender%%o%) %message%'
-      action: '* %sender%%o% %message%'
-      join: '[%sender%%o% connected]'
-      quit: '[%sender%%o% disconnected]'
-      kick: '[%sender%%o% was KICKED (%message%)]'
-      admin: '%sender%%o% to online admins ->- %message%'
-      generic: '%o%%message%'
-      dynmap: '%o%([WEB] %ip%) %message%'
-      death: '%message%'
-    from-irc:
-      chat: '[%srcChannel%] <%sender%> %message%'
-      private: '%sender% whispers> %message%'
-      action: '[%srcChannel%] * %sender% %message%'
-      join: '[%srcChannel%] * Joins: %sender%'
-      part: '[%srcChannel%] * Parts: %sender%'
-      quit: '[%srcChannel%] * Quits: %sender% (%message%)'
-      kick: '[%srcChannel%] * %sender% was kicked by %moderator% (%message%)'
-      nick: '[%srcChannel%] * %sender% is now known as %message%'
-      generic: '%message%'
-    from-plain:
-      action: '* %sender% %message%'
-      say: '[Server] %message%'
+    #from-game:
+    #  chat: '(%o%%sender%%o%) %message%'
+    #  private: '(%o%%sender%%o%) %message%'
+    #  action: '* %o%%sender%%o% %message%'
+    #  join: '[%o%%sender%%o% connected]'
+    #  quit: '[%o%%sender%%o% disconnected]'
+    #  kick: '[%o%%sender%%o% was KICKED (%message%)]'
+    #  admin: '%o%%sender%%o% to online admins ->- %message%'
+    #  generic: '%o%%message%'
+    #  dynmap: '%o%([WEB] %ip%) %message%'
+    #  death: '%o%%message%'
+    #from-irc:
+    #  chat: '[%srcChannel%] <%sender%> %message%'
+    #  private: '%sender% whispers> %message%'
+    #  action: '[%srcChannel%] * %sender% %message%'
+    #  join: '[%srcChannel%] * Joins: %sender%'
+    #  part: '[%srcChannel%] * Parts: %sender%'
+    #  quit: '[%srcChannel%] * Quits: %sender% (%message%)'
+    #  kick: '[%srcChannel%] * %sender% was kicked by %moderator% (%message%)'
+    #  nick: '[%srcChannel%] * %sender% is now known as %message%'
+    #  generic: '%message%'
+    #from-plain:
+    #  action: '* %sender% %message%'
+    #  say: '[Server] %message%'
     #======================================
 
     #==========Colorful formatting=========
-    #from-game:
-    #  chat: '<%prefix%%sender%%suffix%%o%> %message%'
-    #  private: '%prefix%%sender%%suffix%%o% whispers> %message%'
-    #  action: '%purple%* %prefix%%sender%%suffix%%purple% %message%'
-    #  join: '%darkgrey%[%sender% connected]'
-    #  quit: '%darkgrey%[%sender% disconnected]'
-    #  kick: '%red%[%sender% was KICKED (%message%)]'
-    #  generic: '%darkgrey%%message%'
-    #  admin: '%prefix%%sender%%suffix% to online admins> %message%'
-    #  death: '%red%%message%'
-    #from-irc:
-    #  chat: '%grey%[%srcChannel%]%foreground% <%ircPrefix%%sender%> %message%'
-    #  private: '%grey%[IRC]%foreground% %sender% whispers> %message%'
-    #  action: '%grey%[%srcChannel%]%purple% * %ircPrefix%%sender% %message%'
-    #  join: '%grey%[%srcChannel%]%darkgreen% * Joins: %sender%'
-    #  part: '%grey%[%srcChannel%]%darkgreen% * Parts: %sender%'
-    #  quit: '%grey%[%srcChannel%]%blue% * Quits: %sender%'
-    #  kick: '%grey%[%srcChannel%]%darkgreen% * %sender% was kicked by %ircModPrefix%%moderator%'
-    #  nick: '%grey%[%srcChannel%]%darkgreen% * %sender% is now known as %message%'
-    #  generic: '%grey%%message%'
-    #from-plain:
-    #  action: '%purple%* %sender%%purple% %message%'
-    #  say: '%magenta%[Server] %message%'
-    #======================================
+    from-game:
+      chat: '(%prefix%%o%%sender%%suffix%%o%) %message%'
+      private: '%prefix%%sender%%suffix%%o% whispers> %message%'
+      action: '%purple%* %prefix%%sender%%suffix%%purple% %message%'
+      join: '%darkgrey%[%sender% connected]'
+      quit: '%darkgrey%[%sender% disconnected]'
+      kick: '%red%[%sender% was KICKED (%message%)]'
+      generic: '%darkgrey%%message%'
+      admin: '%prefix%%sender%%suffix% to online admins> %message%'
+      death: '%red%%message%'
+    from-irc:
+      chat: '%grey%[%srcChannel%]%foreground% <%ircPrefix%%sender%> %message%'
+      private: '%grey%[IRC]%foreground% %sender% whispers> %message%'
+      action: '%grey%[%srcChannel%]%purple% * %ircPrefix%%sender% %message%'
+      join: '%grey%[%srcChannel%]%darkgreen% * Joins: %sender%'
+      part: '%grey%[%srcChannel%]%darkgreen% * Parts: %sender%'
+      quit: '%grey%[%srcChannel%]%blue% * Quits: %sender%'
+      kick: '%grey%[%srcChannel%]%darkgreen% * %sender% was kicked by %ircModPrefix%%moderator%'
+      nick: '%grey%[%srcChannel%]%darkgreen% * %sender% is now known as %message%'
+      generic: '%grey%%message%'
+    from-plain:
+      action: '%purple%* %sender%%purple% %message%'
+      say: '%magenta%[Server] %message%'
 
 
 # ******************* IRC BOTS/SERVERS AND CHANNELS ******************* [CHANGES REQUIRED]

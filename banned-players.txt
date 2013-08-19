@@ -1,4 +1,4 @@
-# Updated 8/17/13 12:18 PM by Minecraft 1.6.2
+# Updated 8/19/13 10:32 AM by Minecraft 1.6.2
 # victim name | ban date | banned by | banned until | reason
 
 velandia|2012-11-30 19:47:12 -0600|(Unknown)|Forever|Banned by an operator.
