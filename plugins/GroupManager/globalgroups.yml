@@ -1,7 +1,5 @@
 groups:
   g:creative_member:
-    inheritance:
-    - g:member
     permissions:
     - -essentials.sell
     - -essentials.signs.*
@@ -15,13 +13,12 @@ groups:
     - worldedit.navigation.jumpto
     - worldedit.navigation.thru
   g:operator:
-    inheritance:
-    - g:moderator
     permissions:
     - -logblock.ignoreRestrictions
     - -logblock.clearlog
     - -logblock.hide
     - bukkit.command.xp
+    - dynmap.*
     - essentials.*
     - groupmanager.mangaddp
     - groupmanager.mangcheckp
@@ -41,14 +38,10 @@ groups:
     - worldedit.*
     - worldguard.*
   g:owner:
-    inheritance:
-    - g:operator
     permissions:
     - '*'
     - bukkit.*
   g:moderator:
-    inheritance:
-    - g:member
     permissions:
     - essentials.back
     - essentials.ban
@@ -92,24 +85,21 @@ groups:
     - multiverse.teleport.other.*
     - spectate.use
     - -logblock.rollback
-    - essentials.hat
     - essentials.list.hidden
     - essentials.vanish
     - lb
   g:sponsor:
-    inheritance:
-    - g:member
     permissions:
     - essentials.sethome.multiple.sponsor
   g:vip:
-    inheritance:
-    - g:sponsor
     permissions:
+    - essentials.home
     - essentials.sethome.multiple.vip
     - essentials.stack
     - essentials.weather
   g:visitor:
     permissions:
+    - -dynmap.*
     - essentials.delhome
     - essentials.help
     - essentials.helpop
@@ -129,8 +119,6 @@ groups:
     - multiverse.portal.access.*
     - multiverse.teleport.self.*
   g:member:
-    inheritance:
-    - g:visitor
     permissions:
     - essentials.afk
     - essentials.back
@@ -161,6 +149,7 @@ groups:
     - essentials.signs.create.mail
     - essentials.signs.create.trade
     - essentials.signs.use.*
+    - essentials.spawn
     - essentials.suicide
     - essentials.time
     - essentials.time.set
@@ -181,7 +170,5 @@ groups:
     - scs.remove
     - scs.use
   g:supervip:
-    inheritance:
-    - g:vip
     permissions:
     - essentials.sethome.multiple.supervip
