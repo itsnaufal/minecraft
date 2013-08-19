@@ -5,9 +5,6 @@
 groups:
   default:
     worlds:
-    - centralius
-    - centralius_nether
-    - centralius_the_end
     - world
     - world_nether
     - world_the_end
@@ -15,6 +12,9 @@ groups:
     - all
   Temp16:
     worlds:
+    - centralius
+    - centralius_nether
+    - centralius_the_end
     - temp16
     - temp16_nether
     - temp16_the_end
