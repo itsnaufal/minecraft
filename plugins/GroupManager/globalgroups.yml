@@ -30,6 +30,7 @@ groups:
     - groupmanager.manucheckp
     - groupmanager.manudelp
     - groupmanager.manulistp
+    - griefprevention.*
     - hcw.*
     - logblock.*
     - scs.*
@@ -169,6 +170,9 @@ groups:
     - scs.manage
     - scs.remove
     - scs.use
+    - griefprevention.lava
+    - griefprevention.spam
+    - griefprevention.loginspam
   g:supervip:
     permissions:
     - essentials.sethome.multiple.supervip
