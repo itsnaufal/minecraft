@@ -113,7 +113,7 @@ GriefPrevention:
     LavaBuckets:
       Place:
         Wilderness:
-          AboveSeaLevel: Allow
+          AboveSeaLevel: Deny
           BelowSeaLevel: Allow
           RequiredPermissions:
           - GriefPrevention.Lava
@@ -163,8 +163,8 @@ GriefPrevention:
         ClaimControl: RequireBuild
     VillagerTrading:
       Wilderness:
-        AboveSeaLevel: Allow
-        BelowSeaLevel: Allow
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
       Claims:
         AboveSeaLevel: Allow
         BelowSeaLevel: Allow
@@ -381,8 +381,8 @@ GriefPrevention:
         ClaimControl: RequireBuild
     Breeding:
       Wilderness:
-        AboveSeaLevel: Allow
-        BelowSeaLevel: Allow
+        AboveSeaLevel: Deny
+        BelowSeaLevel: Deny
       Claims:
         AboveSeaLevel: Allow
         BelowSeaLevel: Allow
@@ -527,7 +527,7 @@ GriefPrevention:
   Siege:
     ItemTransfer: true
     BlockRevert: false
-    Enabled: false
+    Enabled: true
     BreakableBlocks:
     - DIRT
     - GRASS
@@ -584,7 +584,7 @@ GriefPrevention:
     InvestigationTool: STICK
     ModificationTool: GOLD_SPADE
     NoSurvivalBuildingOutsideClaims: false
-    WarnWhenBuildingOutsideClaims: false
+    WarnWhenBuildingOutsideClaims: true
     AllowUnclaimingLand: true
     AutoRestoreUnclaimedLand: true
     WildernessWarningBlockCount: 15
