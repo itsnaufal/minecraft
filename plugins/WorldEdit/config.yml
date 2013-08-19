@@ -37,7 +37,7 @@ super-pickaxe:
     many-drop-items: false
 
 snapshots:
-    directory: '/slow/backups/'
+    directory: '/slow/minecraft/backups/'
 
 navigation-wand:
     item: 345
