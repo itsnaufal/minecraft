@@ -61,6 +61,9 @@ loggedWorlds:
 - centralius
 - centralius_nether
 - centralius_the_end
+- temp16
+- temp16_nether
+- world_old
 clearlog:
   enableAutoClearLog: false
   auto:
