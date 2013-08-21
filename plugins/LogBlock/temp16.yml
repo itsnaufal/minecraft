@@ -14,10 +14,10 @@ logging:
   ENDERDRAGON: true
   DIODEINTERACT: false
   SNOWFADE: false
-  CHESTACCESS: false
+  CHESTACCESS: true
   ENDERMEN: false
   WITHER: true
-  SIGNTEXT: false
+  SIGNTEXT: true
   WORLDEDIT: false
   LAVAFLOW: false
   CAKEEAT: false
@@ -26,5 +26,5 @@ logging:
   NOTEBLOCKINTERACT: false
   GHASTFIREBALLEXPLOSION: true
   CREEPEREXPLOSION: true
-  DOORINTERACT: false
+  DOORINTERACT: true
 table: lb-temp16
