@@ -27,7 +27,7 @@ worlds:
         prefix: t
         perspective: iso_SE_30_hires
         shader: stdtexture
-        lighting: shadows
+        lighting: brightnightandday
         image-format: default
         mapzoomin: 4
         append_to_world: ''
@@ -55,7 +55,7 @@ worlds:
         prefix: t
         perspective: iso_SE_30_hires
         shader: stdtexture
-        lighting: shadows
+        lighting: brightnightandday
         image-format: default
         mapzoomin: 4
         append_to_world: ''
@@ -83,7 +83,7 @@ worlds:
         prefix: t
         perspective: iso_SE_30_hires
         shader: stdtexture
-        lighting: shadows
+        lighting: brightnightandday
         image-format: default
         mapzoomin: 4
         append_to_world: ''
@@ -111,7 +111,7 @@ worlds:
         prefix: t
         perspective: iso_SE_30_hires
         shader: stdtexture
-        lighting: shadows
+        lighting: brightnightandday
         image-format: default
         mapzoomin: 4
         append_to_world: ''
