@@ -19,13 +19,12 @@ settings:
 
   #These tags identify built-in endpoints (for the paths: section). Other endpoints may be provided by plugins.
   minecraft-tag: 'minecraft'  #A basic game-side endpoint (a chat plugin may provide better functionality).
-  cancelled-tag: 'cancelled'   #Cancelled chat is sent here. Give this tag a name only if you disable either auto-paths or minecraft-tag
-  console-tag: 'console'      #The minecraft server console.
-  #dynmap-tag: 'dynmap'      #The Dynamic Map plugin
+  cancelled-tag: ''           #Cancelled chat is sent here. Give this tag a name to handle messages cancelled by a chat plugin.
+  console-tag: 'console'      #The minecraft server console. Handles /say and .cmd.
 
   #Automatically establish paths between unsecured communication endpoints. Turn off if you always want to configure every path manually.
   #(Secured endpoints can still send messages through auto-paths, but not receive them)
-  auto-paths: false
+  auto-paths: true
 
   # If set, this character will be inserted after each character ("abc" -> "a_b_c_") to prevent IRC highlights
   # The default value, "\u200B", is the unicode zero width space. "\x0f" (irc formatting reset code) might work too.
@@ -47,28 +46,36 @@ settings:
   #Set this to true to have CraftIRC cancel all minecraft chat if no other plugin is doing it.
   cancel-chat: false
 
+  # If true, any messages appearing to anyone in minecraft chat will be logged by the tag of the endpoint they came from
+  log: true
+
   #IRC commands start with this, for example '.players' (it's not part of the command name though)
   command-prefix: '.'
 
-  #Use different words for IRC commands
+  #Use different words for IRC commands. This won't add additional irc commands, only aliases for the existing ones.
   irc-commands:
     say: ['say','mc']
-    players: ['players','list','who']
+    players: ['players']
     cmd: ['cmd','c']
 
   #Output a LOT of crap to the console in case you're having problems or are a plugin developer.
   debug: false
 
-  #Console commands that can be called by an admin using .cmd/.c in an admin channel
-  console-commands: [ 'ircreload', 'reload', 'save-all', 'ban', 'kick', '*']
+  #Console commands that can be called by an admin using .cmd/.c
+  #This is restricted to:
+  # - Any irc channel when admin is enabled in default-attributes
+  # - For manual paths: irc to console paths with admin attribute
+  # - IRC users matching admin-prefixes in the bot section below (usually channel OPs or owners)
+  #Use '*' to enable all commands. Use with care only if you understand the restrictions above.
+  console-commands: ['reload', 'save-all']
 
   #Delay before allowing these event types to be relayed (prevent startup flood)
-  hold-after-enable: {chat: 0, joins: 5000, quits: 5000, kicks: 0, bans: 0}
+  hold-after-enable: {chat: 0, joins: 0, quits: 0, kicks: 0, bans: 0}
 
   #How long in seconds before attempting a reconnect/rejoin when a connection/join fails.
   retry-delay: 10
 
-  #Bind to a specific IP address in your server.
+  #Bind to a specific IP address in your server. If you're not sure what this means, don't set it.
   #bind-address: 127.0.0.1
 
   #Default formatting templates used in all messages. Plugins may require you to add more.
@@ -78,16 +85,16 @@ settings:
 
     #==========Classic formatting==========
     #from-game:
-    #  chat: '(%o%%sender%%o%) %message%'
-    #  private: '(%o%%sender%%o%) %message%'
-    #  action: '* %o%%sender%%o% %message%'
-    #  join: '[%o%%sender%%o% connected]'
-    #  quit: '[%o%%sender%%o% disconnected]'
-    #  kick: '[%o%%sender%%o% was KICKED (%message%)]'
-    #  admin: '%o%%sender%%o% to online admins ->- %message%'
-    #  generic: '%o%%message%'
-    #  dynmap: '%o%([WEB] %ip%) %message%'
-    #  death: '%o%%message%'
+    #  chat: '(%sender%) %message%'
+    #  private: '(%sender%) %message%'
+    #  action: '* %sender% %message%'
+    #  join: '[%sender% connected]'
+    #  quit: '[%sender% disconnected]'
+    #  kick: '[%sender% was KICKED (%message%)]'
+    #  admin: '%sender% to online admins ->- %message%'
+    #  generic: '%message%'
+    #  say: '[Server] %message%'
+    #  death: '%message%'
     #from-irc:
     #  chat: '[%srcChannel%] <%sender%> %message%'
     #  private: '%sender% whispers> %message%'
@@ -101,11 +108,12 @@ settings:
     #from-plain:
     #  action: '* %sender% %message%'
     #  say: '[Server] %message%'
-    #======================================
+    #  generic: '%message%'
+    ##======================================
 
     #==========Colorful formatting=========
     from-game:
-      chat: '(%prefix%%o%%sender%%suffix%%o%) %message%'
+      chat: '<%prefix%%sender%%suffix%%o%> %message%'
       private: '%prefix%%sender%%suffix%%o% whispers> %message%'
       action: '%purple%* %prefix%%sender%%suffix%%purple% %message%'
       join: '%darkgrey%[%sender% connected]'
@@ -127,6 +135,7 @@ settings:
     from-plain:
       action: '%purple%* %sender%%purple% %message%'
       say: '%magenta%[Server] %message%'
+    #======================================
 
 
 # ******************* IRC BOTS/SERVERS AND CHANNELS ******************* [CHANGES REQUIRED]
@@ -134,15 +143,16 @@ settings:
 # Every channel is a communication endpoint.
 bots:
 
-  - nickname: 'NIRRIUS-IRC'
-    server: 'irc.rizon.net'
+  - nickname: 'Nirrius-IRC'
+    server: 'localhost'           # Change this to the IRC server you wish to connect to
     port: 6667
-    userident: 'nirribot'      #Username/ident, anything you want
+    userident: 'bot'              #Username/ident, anything you want
     serverpass: ''                #This isn't the nickserv password
     ssl: false
+    encoding: 'UTF-8'
 
     #Prevent flood by setting a delay (in ms) between messages to IRC and a maximum queue size.
-    message-delay: 100
+    message-delay: 1000
     queue-size: 5
 
     #Who's considered an admin within a channel?
@@ -156,6 +166,7 @@ bots:
       method: 'nickserv' #Available methods: 'none', 'nickserv', 'gamesurge', 'quakenet'
       username: ''
       password: ''
+      delay: 1000 # Milliseconds to wait after authenticating before joining channels.
 
     #Send raw IRC commands to the server every time I connect.
     on-connect:
@@ -172,19 +183,11 @@ bots:
 
         #Send raw IRC commands to the server every time I join this channel.
         on-join:
-        # - 'PRIVMSG #nirrius :Howdy do!'
-        - 'PRIVMSG #nirrius :Greetings, people of the first quantum.'
-        - 'PRIVMSG #nirrius :My power be upon you.'
+        - "PRIVMSG #nirrius :Ahh After 10,000 years I'm free!"
+        - "PRIVMSG #nirrius :Time to conquer Earth!"
 
-      - name: '#TSBMDH'
-        password: ''
-
-        #Identifies this channel's endpoint (for the paths: section).
-        tag: 'console_irc'
-
-        #Send raw IRC commands to the server every time I join this channel.
-        on-join:
-        # - 'PRIVMSG #nirrius :Howdy do!'
+        # Ignore the +c mode and try sending colors anyway if there are colors in a message
+        force-colors: false
 
       #- name: '#anotherchannel'
       #  ...
@@ -207,131 +210,21 @@ bots:
 # For each path you can filter the messages sent by event type or contents.
 # Paths are one-way, so you must declare A to B and B to A if you want a two-way channel.
 paths:
-  - source: 'nirrius_irc' # new path: irc to mc
-    target: 'minecraft' # endpoint tags are used here
-
-    #Every path can contain a list of filters. Use for swear word censorship, blocking by user, etc.
-    filters:
-      #Each filter contains regular expressions for formatting variables. This one ignores commands (.TEXT)
-      - message: '^\.[^ ]+'
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: false
-    #end path: irc to mc
-
-  - source: 'minecraft' # new path: mc to irc
-    target: 'nirrius_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: false
-    #end path: mc to irc
-
-  - source: 'nirrius_irc' # new path: irc to dynmap
-    target: 'dynmap' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: true
-    #end path: irc to dynmap
-
-  - source: 'dynmap' # new path: dynmap to irc
-    target: 'nirrius_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: true
-    #end path: dynmap to irc
-
-  - source: 'minecraft' # new path: mc to irc_logger
-    target: 'console_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: true
-    #end path: mc to irc_logger
-
-  - source: 'nirrius_irc' # new path: irc to irc_logger
-    target: 'console_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: true
-    #end path: irc to irc_logger
-
-  - source: 'cancelled' # new path: cancelled to irc_logger
-    target: 'console_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: false
-    #end path: cancelled to irc_logger
-
-  - source: 'console' # new path: console to irc_logger
-    target: 'console_irc' # endpoint tags are used here
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: true
-    #end path: console to irc_logger
-
-  - source: 'console_irc' # new path: irc_logger to console
-    target: 'console' # endpoint tags are used here
-
-    #Every path can override the formatting strings defined in settings.formatting .
-    formatting:
-      from-game:
-        chat: ''
-        private: ''
-        action: ''
-        join: ''
-        quit: ''
-        kick: ''
-        admin: ''
-        generic: ''
-        #dynmap: ''
-        death: ''
-      from-irc:
-        chat: ''
-        private: ''
-        action: ''
-        join: ''
-        part: ''
-        quit: ''
-        kick: ''
-        nick: ''
-        generic: ''
-      from-plain:
-        action: ''
-        say: ''
-    #  chat: '[%srcChannel%] <%sender%> %message%'
-    #  join: '[%srcChannel%] * Joins: %sender%'
-
-    #Every path can override the attributes block from default-attributes (see below).
-    attributes:
-      admin: true
-
-      chat: false
-      action: false
-      join: false
-      part: false
-      nick: false
-      quit: false
-      kick: false
-      private: false
-      command: true
-      say: false
-      generic: false
-      death: false
-    #  ...
-
-    #The disable flag allows you to disable a path temporarily without removing it from the configuration file.
-    disable: false
-    #end path: irc_logger to console
 
   #- source: 'minecraft'
   #  target: 'changeme'
 
-  #- source: 'changeme' # new path: changeme to minecraft
-  #  target: 'minecraft' # endpoint tags are used here
+  #- source: 'changeme'     # These are endpoint tags
+  #  target: 'minecraft'    #
   #
-  #  #Every path can contain a list of filters. Use for swear word censorship, blocking by user, etc.
+  #  #Every path can contain a list of filters that block any matched messages.
+  #  #To replace instead of blocking, see the replacement filters section below.
   #  filters:
   #    #Each filter contains regular expressions for formatting variables. This one ignores commands (.TEXT)
   #    - message: '^\.[^ ]+'
+  #    #Slightly more advanced example, ignores specific messages from a specific user.
+  #    - sender: '^Lain.*$'
+  #      message: "\x0312Automsg\x0304"
   #
   #  #Every path can override the formatting strings defined in settings.formatting .
   #  formatting:
@@ -361,7 +254,7 @@ default-attributes:
 
   #Disables all communication paths. No message will be sent anywhere.
   #If you don't set this to false, CraftIRC may not work!
-  disable: false
+  disable: true
 
   #Every event type (they're the same as the names in settings.formatting) can be enabled or disabled here.
   #In addition, commands (such as those handled by other plugins) may require you to define extra attributes.
@@ -378,7 +271,6 @@ default-attributes:
     command: true
     say: true
     generic: true
-    #dynmap: true
     death: true
 
     #Admin commands and /admins! can only be sent through a path where admin is set to true
@@ -409,6 +301,7 @@ colormap:
   - {irc: 13, game: "\u00A7d", name: 'magenta'}
   - {irc: 8, game: "\u00A7e", name: 'yellow'}
   - {irc: 1, game: "\u00A7f", name: 'foreground'}
+  - {irc: -1, game: "\u00A7r", name: 'reset'}
 
 
 # ******************* REPLACEMENT FILTERS *******************
@@ -477,4 +370,3 @@ filters:
   modUsername: []
   modHostname: []
   srcChannel: []
-
