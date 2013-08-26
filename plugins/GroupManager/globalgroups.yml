@@ -1,4 +1,117 @@
 groups:
+  g:creative_member:
+    permissions:
+    - -essentials.sell
+    - -essentials.signs.*
+    - -essentials.kit
+    - -essentials.kit.*
+    - essentials.compass
+    - essentials.getpos
+    - essentials.suicide
+    - essentials.warp
+    - essentials.warp.list
+    - worldedit.navigation.jumpto
+    - worldedit.navigation.thru
+  g:operator:
+    permissions:
+    - -logblock.ignoreRestrictions
+    - -logblock.clearlog
+    - -logblock.hide
+    - bukkit.command.xp
+    - dynmap.*
+    - essentials.*
+    - griefprevention.*
+    - griefprevention.adjustclaimblocks
+    - griefprevention.adminclaims
+    - griefprevention.admineavesdrop
+    - griefprevention.buysellclaim
+    - griefprevention.claims
+    - griefprevention.createclaim
+    - griefprevention.deathblow
+    - griefprevention.deleteclaims
+    - griefprevention.eavesdrop
+    - griefprevention.ignoreclaims
+    - griefprevention.lava
+    - griefprevention.loginspam
+    - griefprevention.restorenature
+    - griefprevention.restorenatureaggressive
+    - griefprevention.spam
+    - groupmanager.mangaddp
+    - groupmanager.mangcheckp
+    - groupmanager.mangdelp
+    - groupmanager.manglistp
+    - groupmanager.mansave
+    - groupmanager.mantogglevalidate
+    - groupmanager.manuaddp
+    - groupmanager.manucheckp
+    - groupmanager.manudelp
+    - groupmanager.manulistp
+    - hcw.*
+    - logblock.*
+    - scs.*
+    - spectate.cantspectate
+    - spectate.use
+    - worldedit.*
+    - worldguard.*
+  g:owner:
+    permissions:
+    - '*'
+    - bukkit.*
+  g:moderator:
+    permissions:
+    - -logblock.rollback
+    - essentials.back
+    - essentials.ban
+    - essentials.ban.notify
+    - essentials.banip
+    - essentials.broadcast
+    - essentials.clearinventory
+    - essentials.ext
+    - essentials.getpos
+    - essentials.hat
+    - essentials.helpop.recieve
+    - essentials.home.others
+    - essentials.jails
+    - essentials.kick
+    - essentials.kick.notify
+    - essentials.kill
+    - essentials.list.hidden
+    - essentials.mute
+    - essentials.nick.others
+    - essentials.ptime
+    - essentials.realname
+    - essentials.sethome.multiple.staff
+    - essentials.togglejail
+    - essentials.top
+    - essentials.tp
+    - essentials.tphere
+    - essentials.tppos
+    - essentials.unban
+    - essentials.unbanip
+    - essentials.vanish
+    - essentials.weather
+    - essentials.whois
+    - essentials.world
+    - groupmanager.listgroups
+    - groupmanager.mandemote
+    - groupmanager.manpromote
+    - groupmanager.manselect
+    - groupmanager.manuadd
+    - groupmanager.manudel
+    - groupmanager.manwhois
+    - groupmanager.notify.other
+    - lb
+    - logblock.*
+    - multiverse.teleport.other.*
+    - spectate.use
+  g:sponsor:
+    permissions:
+    - essentials.sethome.multiple.sponsor
+    - GP.Sponsor
+  g:vip:
+    permissions:
+    - essentials.sethome.multiple.vip
+    - GP.VIP
   g:visitor:
     permissions:
     - -dynmap.*
@@ -61,8 +174,8 @@ groups:
     - essentials.tpdeny
     - essentials.warp
     - essentials.warp.list
-    - essentials.worth
     - essentials.weather
+    - essentials.worth
     - griefprevention.lava
     - griefprevention.loginspam
     - griefprevention.spam
@@ -75,117 +188,6 @@ groups:
     - scs.manage
     - scs.remove
     - scs.use
-  g:creative_member:
-    permissions:
-    - -essentials.sell
-    - -essentials.signs.*
-    - -essentials.kit
-    - -essentials.kit.*
-    - essentials.compass
-    - essentials.getpos
-    - essentials.suicide
-    - essentials.warp
-    - essentials.warp.list
-    - worldedit.navigation.jumpto
-    - worldedit.navigation.thru
-  g:moderator:
-    permissions:
-    - essentials.back
-    - essentials.ban
-    - essentials.ban.notify
-    - essentials.banip
-    - essentials.broadcast
-    - essentials.clearinventory
-    - essentials.ext
-    - essentials.getpos
-    - essentials.hat
-    - essentials.helpop.recieve
-    - essentials.home.others
-    - essentials.jails
-    - essentials.kick
-    - essentials.kick.notify
-    - essentials.kill
-    - essentials.mute
-    - essentials.nick.others
-    - essentials.ptime
-    - essentials.realname
-    - essentials.sethome.multiple.staff
-    - essentials.togglejail
-    - essentials.top
-    - essentials.tp
-    - essentials.tphere
-    - essentials.tppos
-    - essentials.unban
-    - essentials.unbanip
-    - essentials.weather
-    - essentials.whois
-    - essentials.world
-    - groupmanager.listgroups
-    - groupmanager.mandemote
-    - groupmanager.manpromote
-    - groupmanager.manselect
-    - groupmanager.manuadd
-    - groupmanager.manudel
-    - groupmanager.manwhois
-    - groupmanager.notify.other
-    - logblock.*
-    - multiverse.teleport.other.*
-    - spectate.use
-    - -logblock.rollback
-    - essentials.list.hidden
-    - essentials.vanish
-    - lb
-  g:operator:
-    permissions:
-    - -logblock.ignoreRestrictions
-    - -logblock.clearlog
-    - -logblock.hide
-    - bukkit.command.xp
-    - dynmap.*
-    - essentials.*
-    - griefprevention.*
-    - griefprevention.adjustclaimblocks
-    - griefprevention.adminclaims
-    - griefprevention.admineavesdrop
-    - griefprevention.buysellclaim
-    - griefprevention.claims
-    - griefprevention.createclaim
-    - griefprevention.deathblow
-    - griefprevention.deleteclaims
-    - griefprevention.eavesdrop
-    - griefprevention.ignoreclaims
-    - griefprevention.lava
-    - griefprevention.loginspam
-    - griefprevention.restorenature
-    - griefprevention.restorenatureaggressive
-    - griefprevention.spam
-    - groupmanager.mangaddp
-    - groupmanager.mangcheckp
-    - groupmanager.mangdelp
-    - groupmanager.manglistp
-    - groupmanager.mansave
-    - groupmanager.mantogglevalidate
-    - groupmanager.manuaddp
-    - groupmanager.manucheckp
-    - groupmanager.manudelp
-    - groupmanager.manulistp
-    - hcw.*
-    - logblock.*
-    - scs.*
-    - spectate.cantspectate
-    - spectate.use
-    - worldedit.*
-    - worldguard.*
-  g:owner:
-    permissions:
-    - '*'
-    - bukkit.*
-  g:sponsor:
-    permissions:
-    - essentials.sethome.multiple.sponsor
-  g:vip:
-    permissions:
-    - essentials.sethome.multiple.vip
   g:supervip:
     permissions:
     - essentials.sethome.multiple.supervip
