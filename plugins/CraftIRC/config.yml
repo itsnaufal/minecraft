@@ -83,7 +83,7 @@ settings:
     #### VARIABLES AND COLORS (from colormap): %name% (as in %message% or %yellow%). Different events provide different variables.
     #### IRC FORMATTING: %b% %u% %r% %o% %k% %kNUM% (NUM is 0 to 15); Do the same as CTRL+key in mIRC (%o% uses'foreground')
 
-    #==========Classic formatting==========
+    ##==========Classic formatting==========
     #from-game:
     #  chat: '(%sender%) %message%'
     #  private: '(%sender%) %message%'
@@ -105,16 +105,16 @@ settings:
     #  kick: '[%srcChannel%] * %sender% was kicked by %moderator% (%message%)'
     #  nick: '[%srcChannel%] * %sender% is now known as %message%'
     #  generic: '%message%'
+    #  mode: "[%srcChannel%] * %moderator% sets mode %message%"
     #from-plain:
     #  action: '* %sender% %message%'
     #  say: '[Server] %message%'
     #  generic: '%message%'
-    ##======================================
 
     #==========Colorful formatting=========
     from-game:
-      chat: '<%prefix%%sender%%suffix%%o%> %message%'
-      private: '%prefix%%sender%%suffix%%o% whispers> %message%'
+      chat: '%prefix%%o%%sender%%o%%suffix%%o%: %message%'
+      private: '%prefix%%o%%sender%%o%%suffix%%o% whispers> %message%'
       action: '%purple%* %prefix%%sender%%suffix%%purple% %message%'
       join: '%darkgrey%[%sender% connected]'
       quit: '%darkgrey%[%sender% disconnected]'
@@ -122,8 +122,9 @@ settings:
       generic: '%darkgrey%%message%'
       admin: '%prefix%%sender%%suffix% to online admins> %message%'
       death: '%red%%message%'
+      say: '%magenta%[Server] %message%'
     from-irc:
-      chat: '%grey%[%srcChannel%]%foreground% <%ircPrefix%%sender%> %message%'
+      chat: '%grey%[%srcChannel%]%foreground% %ircPrefix%%sender%: %message%'
       private: '%grey%[IRC]%foreground% %sender% whispers> %message%'
       action: '%grey%[%srcChannel%]%purple% * %ircPrefix%%sender% %message%'
       join: '%grey%[%srcChannel%]%darkgreen% * Joins: %sender%'
@@ -135,7 +136,6 @@ settings:
     from-plain:
       action: '%purple%* %sender%%purple% %message%'
       say: '%magenta%[Server] %message%'
-    #======================================
 
 
 # ******************* IRC BOTS/SERVERS AND CHANNELS ******************* [CHANGES REQUIRED]
@@ -144,7 +144,7 @@ settings:
 bots:
 
   - nickname: 'Nirrius-IRC'
-    server: 'localhost'           # Change this to the IRC server you wish to connect to
+    server: 'irc.rizon.net'           # Change this to the IRC server you wish to connect to
     port: 6667
     userident: 'bot'              #Username/ident, anything you want
     serverpass: ''                #This isn't the nickserv password
@@ -183,7 +183,7 @@ bots:
 
         #Send raw IRC commands to the server every time I join this channel.
         on-join:
-        - "PRIVMSG #nirrius :Ahh After 10,000 years I'm free!"
+        - "PRIVMSG #nirrius :Ahhh! After 10,000 years I'm free!"
         - "PRIVMSG #nirrius :Time to conquer Earth!"
 
         # Ignore the +c mode and try sending colors anyway if there are colors in a message
@@ -254,7 +254,7 @@ default-attributes:
 
   #Disables all communication paths. No message will be sent anywhere.
   #If you don't set this to false, CraftIRC may not work!
-  disable: true
+  disable: false
 
   #Every event type (they're the same as the names in settings.formatting) can be enabled or disabled here.
   #In addition, commands (such as those handled by other plugins) may require you to define extra attributes.
@@ -301,7 +301,7 @@ colormap:
   - {irc: 13, game: "\u00A7d", name: 'magenta'}
   - {irc: 8, game: "\u00A7e", name: 'yellow'}
   - {irc: 1, game: "\u00A7f", name: 'foreground'}
-  - {irc: -1, game: "\u00A7r", name: 'reset'}
+  - {irc: '', game: "\u00A7r", name: 'reset'}
 
 
 # ******************* REPLACEMENT FILTERS *******************
