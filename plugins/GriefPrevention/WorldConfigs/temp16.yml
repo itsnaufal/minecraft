@@ -550,7 +550,7 @@ GriefPrevention:
     BanThreshold: 8
     MuteThreshold: 4
     LoginCooldownSeconds: 60
-    Enabled: true
+    Enabled: false
     MonitorSlashCommands: /me;/tell;/global;/local
     WarningMessage: Please reduce your noise level.  Spammers will be banned.
     KickMessage: Kicked for spamming.
