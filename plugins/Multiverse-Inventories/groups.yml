@@ -3,13 +3,6 @@
 # To ADD, DELETE, and EDIT groups use the command /mvinv group.
 # No support will be given for those who manually edit these groups.
 groups:
-  default:
-    worlds:
-    - world
-    - world_nether
-    - world_the_end
-    shares:
-    - all
   Temp16:
     worlds:
     - centralius
@@ -18,12 +11,13 @@ groups:
     - temp16
     - temp16_nether
     - temp16_the_end
-    shares:
-    - all
-  Limbo:
-    worlds:
     - world_old
     - world_old_nether
     - world_old_the_end
+    shares:
+    - all
+  Inverness:
+    worlds:
+    - inverness
     shares:
     - all
