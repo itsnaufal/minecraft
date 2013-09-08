@@ -1,0 +1,24 @@
+cluster:
+  alldamage:
+  - Damage
+  - Pvp
+  - MonsterDamage
+  buildcreature:
+  - BuildGolem
+  - BuildSnowman
+  - BuildWither
+  notify:
+  - NotifyExit
+  - NotifyEnter
+  spawnmonster:
+  - SpawnByPlugin
+  - SpawnInvasion
+  - SpawnJockey
+  - SpawnLightning
+  - SpawnMob
+  - Spawner
+  jail:
+  - AllowEntry
+  - AllowLeave
+  - AllowTpIn
+  - AllowTpOut

@@ -82,6 +82,13 @@ groups:
     - scs.manage
     - scs.remove
     - scs.use
+    - gpflags.getflag
+    - gpflags.getflag.global
+    - gpflags.help
+    - gpflags.flags
+    - gpflags.clusters
+    - gpflags.flags.spawnmob
+    - gpflags.flags.spawninvasion
   g:creative_member:
     permissions:
     - -essentials.sell
@@ -188,10 +195,11 @@ groups:
     - hcw.*
     - logblock.*
     - scs.*
+    - sbc.*
     - spectate.cantspectate
     - spectate.use
     - worldedit.*
-    - worldguard.*
+    - gpflags.*
   g:owner:
     permissions:
     - '*'

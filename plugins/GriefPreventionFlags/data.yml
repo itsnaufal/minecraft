@@ -1,0 +1,18 @@
+data:
+  database:
+    version: '1.5'
+  global:
+    notifyenter: 'false'
+  '166':
+    allowtpout: 'false'
+    commands: 'false'
+  '192':
+    healing: 'false'
+    portal: 'false'
+    notifyenter: 'false'
+    spawnmob: 'false'
+    icemelt: 'false'
+  '144':
+    spawnmob: 'false'
+  '197':
+    commands: 'false'

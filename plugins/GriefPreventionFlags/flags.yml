@@ -1,0 +1,151 @@
+flag:
+  allowentry:
+    name: allowentry
+    description: Allows or blocks player entry into claim.
+    message: §cYou are not allowed in §6<1>§c's claim.
+  allowleave:
+    name: allowleave
+    description: Allows or blocks a player from leaving a claim.
+    message: §cYou are not allowed to leave §6<1>§c's claim.
+  allowtpin:
+    name: allowtpin
+    description: Allows or blocks teleporting into a claim.
+    message: §cYou are not allowed to teleport to §6<1>§c's claim.
+  allowtpout:
+    name: allowtpout
+    description: Allows or blocks teleporting from a claim.
+    message: §cYou are not allowed to teleport from §6<1>§c's claim.
+  breeding:
+    name: breeding
+    description: Toggles animal and villager breeding.
+  breedvillager:
+    name: breedvillager
+    description: Toggles villager breeding.
+  buildgolem:
+    name: buildgolem
+    description: Toggles ability to build Iron Golems.
+  buildsnowman:
+    name: buildsnowman
+    description: Toggles ability to build Snow Golems.
+  buildwither:
+    name: buildwither
+    description: Toggles ability to build the Wither.
+  commands:
+    name: commands
+    description: Toggles ability to use slash commands.
+    message: §cCommands are disabled in §6<1>§c's claim.
+  damage:
+    name: damage
+    description: Toggles damage taken by players by non living entities.
+  dragoneggtp:
+    name: dragoneggtp
+    description: Toggles allowing a dragon egg to teleport.
+  eat:
+    name: eat
+    description: Allows or blocks eating or drinking in the claim.
+    message: §cYou are not allowed to eat in §6<1>§c's claim.
+  fishing:
+    name: fishing
+    description: Allows or blocks fishing from inside the claim.
+    message: §cYou are not allowed to fish in §6<1>§c's claim.
+  experience:
+    name: experience
+    description: Allows or blocks gaining experience in the claim.
+  grass:
+    name: grass
+    description: Toggles grass grass spreading.
+  healing:
+    name: healing
+    description: Toggles ability to heal.
+  hunger:
+    name: hunger
+    description: Toggles getting hungry.
+  ice:
+    name: ice
+    description: Toggles ice forming in snowy biomes.
+  icemelt:
+    name: icemelt
+    description: Toggles ice melting due to light level.
+  itemdrop:
+    name: itemdrop
+    description: Allows or blocks dropping items.
+    message: §cYou are not allowed to drop items in §6<1>§c's claim.
+  itempickup:
+    name: itempickup
+    description: Allows or blocks picking up items.
+  keepexpondeath:
+    name: keepexpondeath
+    description: Toggles loss of exp on death in claim.
+  leafdecay:
+    name: leafdecay
+    description: Toggles leaf decay over time.
+  level:
+    name: level
+    description: Allows or blocks gaining levels in the claim.
+  lightning:
+    name: lightning
+    description: Toggles lightning striking in a claim.
+  monsterdamage:
+    name: monsterdamage
+    description: Toggles damage taken from monsters.
+  notifyenter:
+    name: notifyenter
+    description: Claim entry notifications for non-owners.
+    message: §bNow entering §6<1>§b's claim.
+  notifyexit:
+    name: notifyexit
+    description: Claim entry notifications for non-owners.
+    message: §bNow leaving §6<1>§b's claim.
+  portal:
+    name: portal
+    description: Allows or blocks the use of portals in the claim.
+    message: §cYou are not allowed use portals in §6<1>§c's claim.
+  potionsplash:
+    name: potionsplash
+    description: Toggles disabling potion splash intensity.
+  pvp:
+    name: pvp
+    description: Toggles PvP in administrator claims.
+  slimesplit:
+    name: slimesplit
+    description: Toggles ability for slime to split.
+  snow:
+    name: snow
+    description: Toggles snow forming in snowy biomes.
+  snowmelt:
+    name: snowmelt
+    description: Toggles snow melting due to light level.
+  spawnbyplugin:
+    name: spawnbyplugin
+    description: Toggles mob spawning by 3rd party plugins.
+  spawnegg:
+    name: spawnegg
+    description: Toggles mob spawning by thrown eggs.
+  spawngolem:
+    name: spawngolem
+    description: Toggles spawning of golems in villages.
+  spawninvasion:
+    name: spawninvasion
+    description: Toggles village invasions.
+  spawnjockey:
+    name: spawnjockey
+    description: Toggles spawning of jockeys.
+  spawnlightning:
+    name: spawnlightning
+    description: Toggles mob spawning by lightning strike.
+  spawnmob:
+    name: spawnmob
+    description: Toggles mob spawning by natural means.
+  spawner:
+    name: spawner
+    description: Toggles mob Spawning by monster spawners.
+  spawneregg:
+    name: spawneregg
+    description: Toggles using creative mode monster eggs.
+  spendexp:
+    name: spendexp
+    description: Toggles exp loss when using enchanting or anvil.
+  trading:
+    name: trading
+    description: Allows or blocks trading with villagers.
+    message: §cYou are not allowed to trade in §6<1>§c's claim.
