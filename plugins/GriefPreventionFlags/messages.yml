@@ -1,0 +1,91 @@
+Messages:
+  NoClaimError:
+    Text: §cStand in the claim in which you want to get or set a flag.
+  NoConsoleError:
+    Text: §cThis command cannot be performed from the console.
+  InvalidFlagError:
+    Text: §e<2> §cis not a valid <10>.
+    Notes: '<2>: The flag name requested by the user. <10>: flag or cluster'
+  InvalidTrustError:
+    Text: §e<2> §chas no player trusted for this claim.
+    Notes: '<2>: The flag name requested by the user.'
+  ValueError:
+    Text: §cValue must be true or false.
+  NoClustersFound:
+    Text: §cThere are no clusters defined on this server.
+  SetFlagTrust:
+    Text: §bAdded the player(s) to the trust list for §e<2> §b.
+    Notes: '<2>: The flag name.'
+  RemoveFlagTrustError:
+    Text: §cFailed to remove trust for one or more players.
+  RemoveAllFlagsError:
+    Text: §cFailed to remove one or more flags.
+  SetMultipleFlagsError:
+    Text: §cFailed to set one or more flags.
+  FlagPermError:
+    Text: §cYou do not have permission to use that <10>.
+    Notes: '<10>: flag or cluster'
+  ClaimPermError:
+    Text: §cYou do not have permission to set a <10> in §6<1>§c's claims.
+    Notes: '<1>: The claim owner''s name. <10> flag or cluster'
+  GetFlag:
+    Text: §bThe flag §e<2> §bis <3> §bin this claim.
+    Notes: '<2>: The flag name requested by the user.  <3>: The value of the flag.'
+  SetFlag:
+    Text: §bSet the flag §e<2> §bto <3> §bin this claim.
+    Notes: '<2>: The flag name requested by the user.  <3>: The new value of the flag.'
+  RemoveFlag:
+    Text: §bReturned the flag §e<2> §bto the global setting in this claim.
+    Notes: '<2>: The flag name requested by the user.'
+  InheritedFlag:
+    Text: §bThe flag §e<2> §bis inheriting the global value <3> §bin this claim.
+    Notes: '<2>: The flag name requested by the user.  <3>: The global value of the
+      flag.'
+  FlagCount:
+    Text: §bThere are currently §a<7> §bclaims with the §6<2> §bflag set.
+    Notes: '<2>: The flag name.  <7>: Total flag count.'
+  GetFlagTrust:
+    Text: '§bThe following players have §e<2> §btrust: §e'
+  RemoveFlagTrust:
+    Text: §bRemoved the player(s) to the trust list for §e<2> §b.
+    Notes: '<2>: The flag name'
+  GetFlagGlobal:
+    Text: §bThe flag §e<2> §bis <3> §bglobally.
+    Notes: '<2>: The flag name requested by the user.  <3>: The value of the flag.'
+  SetFlagGlobal:
+    Text: §bSet the flag §e<2> §bto <3> §bglobally.
+    Notes: '<2>: The flag name requested by the user.  <3>: The new value of the flag.'
+  RemoveFlagGlobal:
+    Text: §bReturned the global flag §e<2> §bto the plugin-in default setting.
+    Notes: '<2>: The flag name requested by the user.'
+  GetAllFlags:
+    Text: '§bThe following flags are set: §e'
+  RemoveAllFlags:
+    Text: §bReturned all flags to the global or default setting.
+  SetCluster:
+    Text: §bSet all flags in the cluster §e<2> §bto <3> §bin this claim.
+    Notes: '<2>: The cluster name requested by the user.  <3>: The new value of the
+      cluster.'
+  RemoveCluster:
+    Text: §bReturned all flags in the cluster §e<2> §bto the global or default setting.
+    Notes: '<2>: The cluster name requested by the user.'
+  ConsoleHelpHeader:
+    Text: '§6---------§f <10>: Index §6---------------------------'
+  HelpHeader:
+    Text: '§6---------§f <10>: Index (<5>/<6>)§6--------------------'
+    Notes: '<5>: The current help page.  <6>: The total number of help pages. <10>:
+      The Index Type (Flag or Group)'
+  HelpInfo:
+    Text: §7Use /<10>s [n] to get page n of <10>s.
+    Notes: '§7<10>: flag or cluster'
+  HelpTopic:
+    Text: '§6<2>§f: <4>'
+    Notes: '<2>: The flag or cluster name.  <4>: The flag description.'
+  ValueColorTrue:
+    Text: §aTrue
+  ValueColorFalse:
+    Text: §cFalse
+  Flag:
+    Text: Flag
+  Cluster:
+    Text: Cluster
