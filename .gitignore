@@ -2,6 +2,7 @@
 plugins/dynmap/web/**/*
 plugins/dynmap/*.pending
 plugins/dynmap/ids-by-ip.txt
+plugins/dynmap/hiddenplayers.txt
 plugins/Essentials/userdata/**/*
 plugins/Essentials/warps/**/*
 plugins/GroupManager/backup/**/*
