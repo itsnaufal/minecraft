@@ -5,19 +5,19 @@ tools:
     aliases:
     - t
     params: area 0 all sum none limit 15 desc silent
-    leftClickBehavior: NONE
+    leftClickBehavior: TOOL
     item: 270
-    rightClickBehavior: TOOL
+    rightClickBehavior: BLOCK
     permissionDefault: OP
     canDrop: true
   toolblock:
     params: area 0 all sum none limit 15 desc silent
     permissionDefault: OP
-    rightClickBehavior: BLOCK
+    rightClickBehavior: NONE
     item: 7
     mode: LOOKUP
     canDrop: false
-    defaultEnabled: true
+    defaultEnabled: false
     aliases:
     - tb
     leftClickBehavior: TOOL
@@ -63,7 +63,11 @@ loggedWorlds:
 - centralius_the_end
 - temp16
 - temp16_nether
+- temp16_the_end
 - world_old
+- world_old_nether
+- workd_old_the_end
+- inverness
 clearlog:
   enableAutoClearLog: false
   auto:
