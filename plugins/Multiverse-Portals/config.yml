@@ -5,12 +5,45 @@
 # A config with explanations can be found here:
 # https://github.com/Multiverse/Multiverse-Portals/wiki/config.yml
 
+# This is the item ID of the wand that you'll use for 
+# portal selections. You can find a list of item IDs 
+# at the minecraft wiki: 
+# http://www.minecraftwiki.net/wiki/Item_id
+# The default is a Wooden Axe
+# IF YOU USE WORLDEDIT, CHANGING THIS WILL HAVE NO EFFECT
+# If worlded is detected, we'll just use their tool.
 wand: 271
+
+# There are 2 types of portals, Vanilla style and MV style.
+# If you don't understand the difference leave this on. If
+# you would like to sacrifice MV Style portals for performance
+# (only needed on VERY LARGE servers) set this to false.
 useonmove: true
-portalsdefaulttonether: false
+
+# If you've filled a multiverse portal with the purple goo
+# Should it go to the nether if it has no end location?
+portalsdefaulttonether: true
+
+# If set to false, All players can use ALL portals.
+# If set to true, normal permissions will be checked
+# multiverse.portal.access.PNAME
 enforceportalaccess: true
+
+# How long must players wait (in milliseconds) in
+# between portal uses.
 portalcooldown: 1000
+
+# Allows automatic removal of any portal
+# blocks in a portal after "/mvp remove".
 clearonremove: false
+
+# Determines whether vehicles can teleport through portals.
 teleportvehicles: true
-framematerials: []
+
+# Item IDs of materials allowed to be used in portal frames
+# Currently adminium(7), obsidian(58)
+framematerials: [7,58]
+
+# This just signifies the version number so we can see what version of config you have.
+# NEVER TOUCH THIS VALUE
 version: 2.7
