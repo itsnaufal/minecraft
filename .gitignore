@@ -19,6 +19,7 @@ plugins/GriefPrevention/PlayerData/**/*
 plugins/Multiverse-Inventories/groups/**/*
 plugins/Multiverse-Inventories/players/**/*
 plugins/Multiverse-Inventories/worlds/**/*
+plugins/Multiverse-Portals/portals.yml
 # Home stuff
 .bash_history
 .bash_logout
