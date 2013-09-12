@@ -50,6 +50,7 @@ crash-reports/**/*
 maps/*
 */level.*
 */players/*.dat
+*/players/*.dat.tmp
 */region/*.mcr
 */region/*.mca
 */session.lock
