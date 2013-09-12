@@ -56,7 +56,7 @@ components:
     writeinterval: 1
     sendhealth: true
     sendposition: true
-    allowwebchat: true
+    allowwebchat: false
     webchat-interval: 5
     hidewebchatip: false
     includehiddenplayers: false
@@ -202,7 +202,7 @@ initial-zoomout-validate: true
 # Default delay on processing of updated tiles, in seconds.  This can reduce potentially expensive re-rendering
 # of frequently updated tiles (such as due to machines, pistons, quarries or other automation).  Values can
 # also be set on individual worlds and individual maps.
-tileupdatedelay: 30
+tileupdatedelay: 60
 
 # Tile hashing is used to minimize tile file updates when no changes have occurred - set to false to disable
 enabletilehash: true
@@ -218,7 +218,7 @@ smooth-lighting: true
 
 # Default image format for HDMaps (png, jpg, jpg-q75, jpg-q80, jpg-q85, jpg-q90, jpg-q95, jpg-q100)
 # Has no effect on maps with explicit format settings
-image-format: png
+image-format: jpg-q90
 
 #  use-generated-textures: if true, use generated textures (same as client); false is static water/lava textures
 #  correct-water-lighting: if true, use corrected water lighting (same as client); false is legacy water (darker)
@@ -257,7 +257,6 @@ render-triggers:
   - blockformed
   - blockfaded
   - blockspread
-  - pistonmoved
   - explosion
   #- blockfromto
   #- blockphysics
@@ -269,10 +268,10 @@ render-triggers:
 webpage-title: "Nirrius Minecraft Cartograph"
 
 # The path where the tile-files are placed.
-tilespath: web/tiles
+tilespath: /slow/minecraft/dynmap/web/tiles
 
 # The path where the web-files are located.
-webpath: web
+webpath: /slow/minecraft/dynmap/web
 
 # The network-interface the webserver will bind to (0.0.0.0 for all interfaces, 127.0.0.1 for only local access).
 webserver-bindaddress: 0.0.0.0
