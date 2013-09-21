@@ -17,8 +17,8 @@
 
 limits:
     max-blocks-changed:
-        default: 1000000
-        maximum: 1000000
+        default: 100000
+        maximum: 100000000
     max-radius: 1000000
     max-super-pickaxe-size: 5
     max-brush-radius: 5
@@ -29,7 +29,7 @@ use-inventory:
     allow-override: true
 
 logging:
-    log-commands: false
+    log-commands: true
     file: worldedit.log
 
 super-pickaxe:
@@ -41,7 +41,7 @@ snapshots:
 
 navigation-wand:
     item: 345
-    max-distance: 100
+    max-distance: 200
 
 scripting:
     timeout: 3000
@@ -51,7 +51,7 @@ saving:
     dir: schematics
 
 history:
-    size: 15
+    size: 20
     expiration: 10
 
 wand-item: 271
