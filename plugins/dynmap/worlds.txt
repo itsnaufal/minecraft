@@ -59,34 +59,6 @@ worlds:
         image-format: default
         mapzoomin: 4
         append_to_world: ''
--   name: world_old
-    title: Limbo
-    enabled: true
-    center:
-        x: 800.0
-        y: 68.0
-        z: 255.0
-    sendposition: true
-    sendhealth: true
-    bigworld: false
-    extrazoomout: 2
-    visibilitylimits: [
-        ]
-    hiddenlimits: [
-        ]
-    autogenerate-to-visibilitylimits: true
-    hidestyle: stone
-    maps:
-    -   class: org.dynmap.hdmap.HDMap
-        name: surface
-        title: 'Surface'
-        prefix: t
-        perspective: iso_SE_30_hires
-        shader: stdtexture
-        lighting: brightnightandday
-        image-format: default
-        mapzoomin: 4
-        append_to_world: ''
 -   name: inverness
     title: Inverness
     enabled: true
