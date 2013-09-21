@@ -32,7 +32,7 @@ worlds:
         mapzoomin: 4
         append_to_world: ''
 -   name: temp16
-    title: "Temp Map #16"
+    title: "Tohoku"
     enabled: true
     center:
         x: 160.0

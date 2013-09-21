@@ -22,18 +22,6 @@ worlds:
     radiusX: 500
     radiusZ: 500
     wrapping: false
-  world_old:
-    x: 693.5
-    z: 157.5
-    radiusX: 5000
-    radiusZ: 5000
-    wrapping: false
-  world_old_the_end:
-    x: 100.5
-    z: 0.5
-    radiusX: 5000
-    radiusZ: 5000
-    wrapping: false
   temp16:
     x: 160.5
     z: 5.5

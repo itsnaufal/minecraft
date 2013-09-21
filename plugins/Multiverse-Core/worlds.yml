@@ -49,7 +49,7 @@ worlds:
   temp16_the_end:
     ==: MVWorld
     hidden: 'false'
-    alias: temp16_the_end
+    alias: Tohoku End
     color: WHITE
     style: NORMAL
     pvp: 'true'
@@ -190,7 +190,7 @@ worlds:
   temp16_nether:
     ==: MVWorld
     hidden: 'false'
-    alias: temp16_nether
+    alias: Tohoku Nether
     color: WHITE
     style: NORMAL
     pvp: 'true'
@@ -284,7 +284,7 @@ worlds:
   temp16:
     ==: MVWorld
     hidden: 'false'
-    alias: temp16
+    alias: Tohoku
     color: WHITE
     style: NORMAL
     pvp: 'true'
