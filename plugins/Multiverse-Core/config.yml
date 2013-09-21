@@ -18,7 +18,7 @@
 multiverse-configuration:
   ==: com.onarandombox.MultiverseCore.MultiverseCoreConfiguration
   enforceaccess: 'false'
-  prefixchat: 'false'
+  prefixchat: 'true'
   useasyncchat: 'true'
   teleportintercept: 'true'
   firstspawnoverride: 'true'
@@ -30,4 +30,4 @@ multiverse-configuration:
   firstspawnworld: centralius
   teleportcooldown: '1000'
   defaultportalsearch: 'false'
-  portalsearchradius: '128'
+  portalsearchradius: '16'
